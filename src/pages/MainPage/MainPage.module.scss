@@ -1,0 +1,243 @@
+@import '../../styles/constants';
+
+.boxLimiter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  @media screen and (max-width: $screen_tablet) {
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+  }
+  @media screen and (max-width: $screen_mobile) {
+    overflow-x: hidden;
+    overflow-x: visible;
+    height: 100%;
+  }
+}
+
+.wrapper {
+  max-width: 1140px;
+  height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+  @media screen and (max-width: $screen_mobile) {
+    height: auto;
+  }
+
+  .contentWrapper {
+    width: 588px;
+    height: 235px;
+    padding-top: 130px;
+    visibility: hidden;
+
+    .textBlock {
+      margin-top: 15px;
+
+      p {
+        font-family: $ff_regular;
+        font-size: $fz_middle;
+        color: #606060;
+        white-space: pre-line;
+
+        span {
+          font-family: $ff_medium;
+        }
+      }
+    }
+
+    .logoWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .animatedWrapper {
+    animation-name: contentMove;
+    animation-duration: 0.65s;
+    position: relative;
+    visibility: visible;
+
+    @keyframes contentMove {
+      from {
+        left: -100px;
+        opacity: 0;
+      }
+      to {
+        left: 0;
+        opacity: 1;
+      }
+    }
+  }
+
+  .ballImg {
+    width: 49px;
+    height: 49px;
+    position: absolute;
+    z-index: -5;
+    top: 470px;
+    right: 30px;
+  }
+
+  .card {
+    width: 385px;
+    height: 416px;
+    background-image: url('../../assets/images/parallax/main-img.png');
+    background-size: contain;
+    position: absolute;
+    right: 120px;
+    top: 25px;
+    z-index: -2;
+    background-repeat: no-repeat;
+    will-change: transform;
+    animation-name: imageAppear;
+    visibility: hidden;
+
+    @keyframes imageAppear {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+
+  .card2 {
+    width: 152px;
+    height: 133px;
+    background-image: url('../../assets/images/parallax/lamp-small.png');
+    top: 0;
+    right: 396px;
+    z-index: -1;
+  }
+
+  .card3 {
+    width: 161px;
+    height: 161px;
+    background-image: url('../../assets/images/parallax/ball-big.png');
+    top: 370px;
+    right: 280px;
+    z-index: -1;
+  }
+
+  .card4 {
+    width: 50px;
+    height: 50px;
+    background-image: url('../../assets/images/parallax/ball-small.png');
+    top: 120px;
+    right: -60px;
+    z-index: -1;
+  }
+
+  .card5 {
+    width: 176px;
+    height: 223px;
+    background-image: url('../../assets/images/parallax/lamp-big.png');
+    top: 200px;
+    right: -140px;
+    z-index: -1;
+  }
+
+  .card6 {
+    width: 182px;
+    height: 131px;
+    background-image: url('../../assets/images/parallax/lamp-medium.png');
+    top: 420px;
+    right: 20px;
+    z-index: -1;
+  }
+
+  .card7 {
+    width: 100px;
+    height: 100px;
+    background-image: url('../../assets/images/parallax/ball-medium.png');
+    top: 466px;
+    right: 600px;
+    z-index: -1;
+  }
+
+  .card8 {
+    width: 176px;
+    height: 223px;
+    background-image: url('../../assets/images/parallax/lamp-big.png');
+    top: 264px;
+    left: -237px;
+    z-index: -1;
+  }
+
+  .cardVisible {
+    visibility: visible;
+  }
+
+  @media screen and (max-width: 1140px) {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .card4,
+    .card5,
+    .card8 {
+      display: none;
+    }
+
+    .card {
+      right: 0;
+    }
+    .card2 {
+      right: 290px;
+    }
+    .card3 {
+      right: 168px;
+    }
+    .card6 {
+      right: -84px;
+    }
+    .card7 {
+      right: 503px;
+    }
+  }
+
+  @media screen and (max-width: $screen_tablet) {
+    padding: 0 50px;
+    .contentWrapper {
+      margin: 0 auto;
+      margin-top: 165px;
+    }
+
+    .card {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $screen_mobile) {
+    width: 100%;
+    padding: 0 20px;
+
+    .contentWrapper {
+      width: 100%;
+      margin-top: 0;
+
+      .textBlock {
+        p {
+          font-size: $fz_normal;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .contentWrapper {
+      padding-top: 40px;
+    }
+
+    .ballImg {
+      top: 410px;
+    }
+  }
+}

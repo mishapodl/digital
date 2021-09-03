@@ -1,0 +1,36 @@
+@import '../../../styles/index.scss';
+
+.packagesCircle {
+  margin-top: 120px;
+  max-width: 228px;
+  padding: 2px;
+  border-radius: 50%;
+  background: linear-gradient(to top, rgba(176, 76, 168, 1) 10%, rgba(123, 231, 255, 1) 100%);
+  position: relative;
+  @media only screen and (max-width: $screen_tablet) {
+    margin-left: 40px;
+    margin-top: 200px;
+  }
+  @media only screen and (max-width: $screen_mobile) {
+    margin-left: 8%;
+    margin-top: 100px;
+    margin-bottom: 90px;
+    max-width: 88px;
+  }
+}
+
+.packagesCircleText {
+  background-color: white;
+  white-space: nowrap;
+  padding: 96px 10px;
+  color: $text_dark_purple;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 24px;
+  position: relative;
+  @media only screen and (max-width: $screen_mobile) {
+    padding: 23.4px 0px;
+    font-size: 14px;
+    white-space: pre-wrap;
+  }
+}

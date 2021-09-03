@@ -1,0 +1,145 @@
+@import '../../../styles/constants';
+
+// ? PACKAGE_NAMES
+
+.packageNames {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr 1fr;
+  grid-gap: 30px;
+
+  .field {
+    margin-bottom: 12px;
+  }
+  .fieldWrapper:last-child {
+    .field {
+      margin-bottom: 0;
+    }
+  }
+  .save {
+    margin-top: 1200px;
+  }
+}
+
+.save {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// ? SERVICE_LIST
+
+.services {
+  display: grid;
+  grid-template-areas: 'ua-name ru-name en-name ua-flag ru-flag en-flag delBtn';
+  // grid-template-areas: "names flags delBtn";
+
+  grid-template-columns: repeat(3, 1fr) repeat(4, max-content);
+  grid-auto-rows: max-content;
+  grid-column-gap: 30px;
+  grid-row-gap: 12px;
+  align-items: flex-end;
+  margin-bottom: 12px;
+
+  .field.input {
+    height: 45px;
+  }
+
+  .create {
+    grid-column: 1 / span 3;
+    align-self: flex-start;
+  }
+  .priceField {
+    transform: translateY(-7px);
+    .field {
+      width: 65px;
+      height: 45px;
+    }
+  }
+}
+
+.delBtn {
+  transform: translateY(-14px);
+  margin-left: 48px;
+  cursor: pointer;
+}
+
+.checkboxFieldWrapper {
+  transform: translateY(-11.5px);
+  .title {
+    margin-bottom: 11px;
+  }
+}
+
+[data-btn='packageNameSubmit'] {
+  margin-top: 30px;
+}
+
+.separator {
+  margin: 30px 0 40px;
+}
+
+.remove {
+  display: none;
+}
+
+.mobilePrices {
+  display: none;
+}
+
+@media screen and (max-width: $screen_mobile) {
+  .packageNames {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .services {
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+
+    .field {
+      margin-bottom: 10px;
+    }
+
+    .priceField {
+      display: none;
+    }
+  }
+
+  .checkboxFieldWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    transform: initial;
+  }
+
+  .delBtn {
+    display: none;
+  }
+
+  .remove {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .mobilePrices {
+    width: 100%;
+    color: $text_grey;
+    font-family: $ff_light;
+    font-size: $fz_small;
+    display: flex;
+    justify-content: space-between;
+    // padding-top: 30px;
+
+    .pricePackages {
+      height: 60px;
+
+      &:first-child {
+        padding-top: 30px;
+      }
+    }
+  }
+}

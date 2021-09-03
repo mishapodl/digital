@@ -1,0 +1,170 @@
+@import '../../styles/constants';
+
+@mixin borderGradient {
+  border: 2px solid transparent;
+  border-radius: 100%;
+  background: linear-gradient(white, white), $border_gradient;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+footer {
+  flex: 0 0 auto;
+  @media screen and (max-width: $screen_mobile) {
+    padding-top: 50px;
+    border-top: 1px solid #e0e0e0;
+  }
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 945px;
+  margin: 0 auto;
+  margin-bottom: 170px;
+
+  @media screen and (max-width: $screen_tablet) {
+    padding: 0 10px;
+  }
+
+  @media screen and (max-width: $screen_mobile) {
+    flex-direction: column;
+    margin-bottom: 65px;
+  }
+}
+
+.privacyPolicy {
+  padding: 15px 0;
+  font-family: 'MPlusRounded1C-Medium';
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+  font-weight: 500;
+  font-size: $fz_small;
+  color: $text_grey;
+
+  a {
+    text-decoration: none;
+    color: $text_dark_grey;
+    margin-left: 5px;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      border-color: $text_dark_grey;
+    }
+  }
+
+  @media screen and (max-width: $screen_tablet) {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      padding-top: 10px;
+      margin-left: 0;
+      font-size: $fz_small;
+      margin: 0 auto;
+    }
+  }
+}
+
+.contacts {
+  font-size: $fz_small;
+  flex: 1;
+  max-width: 250px;
+
+  ul {
+    padding: 0;
+
+    li {
+      color: $text_dark_grey;
+      margin-bottom: 28px;
+      list-style: none;
+      display: flex;
+
+      span {
+        display: inline-block;
+        color: $text_grey;
+        min-width: 55px;
+        text-align: right;
+        padding-right: 30px;
+
+        @media screen and (max-width: $screen_tablet) {
+          padding-right: 10px;
+        }
+      }
+
+      a {
+        color: $text_dark_grey;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .contactValue {
+    display: inline-block;
+    min-width: 160px;
+    color: $text_dark_grey;
+  }
+  @media screen and (max-width: $screen_mobile) {
+    margin-bottom: 30px;
+  }
+}
+
+.map {
+  width: 212px;
+  height: 210px;
+  overflow: hidden;
+  @include borderGradient;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    vertical-align: bottom;
+    border-radius: 100%;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  @media screen and (max-width: $screen_tablet) {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  max-width: 150px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: $fz_small;
+        color: $text_grey;
+        &:hover {
+          color: $text_dark_grey;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $screen_tablet) {
+    display: none;
+  }
+}

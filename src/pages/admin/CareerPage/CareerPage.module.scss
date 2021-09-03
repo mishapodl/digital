@@ -1,0 +1,33 @@
+@import '../../../styles/constants';
+
+.lang {
+  padding-bottom: 12px;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: $ff_regular;
+}
+
+.form {
+  display: grid;
+  grid-template: 1fr / repeat(3, 1fr);
+  grid-gap: 30px;
+
+  .fieldWrapper {
+    margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: $screen_mobile) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.save {
+  grid-column: 2 / span 1;
+  align-self: start;
+  left: 50%;
+  transform: translateX(-50%);
+}

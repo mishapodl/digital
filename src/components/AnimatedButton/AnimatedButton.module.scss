@@ -1,0 +1,60 @@
+@import '../../styles/constants';
+
+.animatedButton {
+  a {
+    text-decoration: none;
+
+    button {
+      position: relative;
+      width: 168px;
+      height: 45px;
+      background: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-family: $ff_medium;
+      font-size: $fz_normal;
+      background: #fff;
+      border: none;
+      border: 1px solid transparent;
+      border-radius: 50px;
+      background: -webkit-linear-gradient(#fff, #fff) padding-box,
+        -webkit-linear-gradient(180deg, #0600fc, #d80af9) border-box;
+      cursor: pointer;
+      outline: 0;
+
+      span {
+        background: -webkit-linear-gradient(180deg, #0600fc, #d80af9);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .arrowContainer {
+        position: relative;
+        width: 26px;
+        height: 19px;
+        overflow: hidden;
+
+        .arrowContent {
+          transition: 0.5s;
+          position: absolute;
+          width: 50px;
+          left: -24px;
+          height: 18px;
+          svg:first-child {
+            position: relative;
+            left: -10px;
+          }
+        }
+      }
+      &:hover {
+        .arrowContainer {
+          opacity: 0.8;
+          .arrowContent {
+            left: 10px;
+          }
+        }
+      }
+    }
+  }
+}

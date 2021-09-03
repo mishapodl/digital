@@ -1,0 +1,3 @@
+import ServicesPageSeparatePackagesList from './ServicesPageSeparatePackagesList'
+
+export default ServicesPageSeparatePackagesList

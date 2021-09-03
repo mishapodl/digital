@@ -1,0 +1,48 @@
+@import '../../../styles/constants';
+
+.form {
+  .imageWrapper {
+    .input {
+      width: 40px;
+    }
+  }
+
+  .save {
+    margin-top: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .create {
+    position: initial;
+  }
+}
+
+.socialFieldsWrapper {
+  width: 100%;
+  display: grid;
+  //grid-template: 1fr / min-content 1fr;
+  grid-template-columns: 0.1fr 3fr 0fr;
+  gap: 30px;
+  margin-bottom: 15px;
+
+  p {
+    font-family: $ff_light;
+    color: $text_grey;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .iconUploadWrapper {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $silver;
+  }
+}
+
+.iconInput {
+  display: none;
+}

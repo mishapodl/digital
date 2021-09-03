@@ -1,0 +1,87 @@
+@import '../../styles/constants';
+
+.wrapper {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  pointer-events: visible;
+  transition: opacity 0.2s;
+  &.closed {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: relative;
+  background-color: $white;
+  padding: 60px;
+  border-radius: 20px;
+  @media (max-width: $screen_mobile) {
+    box-sizing: border-box;
+    padding: 60px 30px;
+    width: 280px;
+  }
+  .closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 28px;
+      height: 2px;
+      background-color: $text_grey;
+      transform: rotate(45deg);
+      border-radius: 20px;
+    }
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 28px;
+      height: 2px;
+      background-color: $text_grey;
+      transform: rotate(-45deg);
+      border-radius: 20px;
+    }
+  }
+
+  .modalContent {
+    white-space: pre-wrap;
+    max-width: 384px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .modalFooter {
+    display: grid;
+    justify-content: center;
+    grid-gap: 20px;
+    grid-template: 1fr / max-content max-content;
+    margin-top: 30px;
+    margin-bottom: -20px;
+    button {
+      width: 105px;
+      height: 35px;
+      max-width: none;
+      text-align: center;
+    }
+  }
+}

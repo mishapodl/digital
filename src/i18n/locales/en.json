@@ -1,0 +1,127 @@
+{
+  "about": {
+    "header": "About us"
+  },
+  "footer": {
+    "menu": {
+      "1": "Careers",
+      "2": "About us",
+      "3": "Team",
+      "4": "Services",
+      "5": "Cases"
+    },
+    "privacy": "Privacy policy",
+    "contacts": {
+      "tel": "Tel.:",
+      "address": "Address:",
+      "location": "Vinnytsia, Ukraine, st. Chervonokhrestivska 12"
+    }
+  },
+  "header": {
+    "menu": {
+      "1": "About us",
+      "2": "Team",
+      "3": "Services",
+      "4": "Cases",
+      "5": "Careers"
+    }
+  },
+  "pageNotFound": {
+    "pageNotFoundText": "Something went wrong. Page not found"
+  },
+  "button": {
+    "wantMore": "Want more",
+    "goThere": "Go there",
+    "backToMainPage": "Back to home"
+  },
+  "form": {
+    "error": {
+      "error": "Data entered incorrectly",
+      "credentials": "Login or password are incorrect",
+      "name": {
+        "empty": "(Please enter your Full Name)"
+      },
+      "phone": {
+        "empty": "(Please enter your Phone number)"
+      },
+      "email": {
+        "empty": "(Введіть ел.пошту) {en}"
+      },
+      "files": {
+        "extension": "(Please choose the correct file format)",
+        "size": "(File size limit: 5 MB)"
+      },
+      "login": {
+        "empty": "(Please enter login)",
+        "incorrect": "Incorrect login"
+      },
+      "password": {
+        "empty": "(Please enter password)",
+        "incorrect": "Incorrect password"
+      }
+    }
+  },
+  "GoThere": {
+    "name": "Full name",
+    "phone": "Phone",
+    "email": "E-mail",
+    "submit": "Send",
+    "modal": "Thank you for your trust.\n\nSoon enough we'll review your application and get back to you!"
+  },
+  "Career": {
+    "name": "Full name",
+    "phone": "Phone",
+    "file": {
+      "add": "+ Upload CV",
+      "tip": "(.pdf, .doc, .docx)"
+    },
+    "submit": "Send",
+    "modal": "We look forward to meeting you.\n\nKeep your phone close as we'll call you soon!"
+  },
+  "Services": {
+    "services": "Services",
+    "upperQuote": "Sometimes, simple things can save a business.",
+    "lowerQuote": "We don't reinvent the wheel, but we do make sure to prevent sticks from getting put into it.",
+    "packages": "Service packages"
+  },
+  "cases": {
+    "title": "Cases",
+    "client": "What did client get from us?"
+  },
+  "admin": {
+    "login": "Login",
+    "password": "Password",
+    "submit": "Submit",
+    "main": {
+      "title": "Головна",
+      "fieldTitle": "Main text"
+    },
+    "aboutUs": {
+      "title": "Who we are",
+      "fieldTitle": "Text “Who we are”"
+    },
+    "ourTeam": {
+      "title": "Команда"
+    },
+    "socialNetworks": {
+      "title": "Соцмережі"
+    },
+    "cases": {
+      "title": "Кейси"
+    },
+    "contacts": {
+      "title": "Контакти"
+    },
+    "career": {
+      "title": "Кар'єра"
+    },
+    "requests": {
+      "cv": {
+        "title": "Резюме"
+      },
+      "consultation": {
+        "title": "Консультація"
+      }
+    }
+  }
+}

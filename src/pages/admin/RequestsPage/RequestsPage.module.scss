@@ -1,0 +1,80 @@
+@import '../../../styles/constants';
+
+.form {
+  .fields {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .inputWrapper {
+    width: 48%;
+  }
+
+  .save {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (max-width: $screen_mobile) {
+    .fields {
+      flex-direction: column;
+    }
+
+    .inputWrapper {
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+}
+
+.requestWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-top: 1px solid $silver;
+
+  .value {
+    padding: 5px 0 5px 10px;
+    color: $text_dark_grey;
+    font-family: $ff_regular;
+    font-size: 14px;
+    line-height: 21px;
+    display: inline-block;
+  }
+
+  .link {
+    p {
+      display: inline-block;
+      text-decoration: underline;
+    }
+
+    svg {
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+
+  .key {
+    width: 115px;
+    color: $text_grey;
+    font-family: $ff_light;
+    font-size: 14px;
+    text-align: end;
+    display: inline-block;
+  }
+
+  @media screen and (max-width: $screen_mobile) {
+    flex-direction: column;
+
+    .value {
+      font-size: 12px;
+    }
+
+    .key {
+      width: 50px;
+      font-size: 12px;
+    }
+  }
+}

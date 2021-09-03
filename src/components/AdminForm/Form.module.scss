@@ -1,0 +1,319 @@
+@import '../../styles/constants';
+
+// !
+// ? Form Elements
+// !
+
+.fieldWrapper {
+  box-sizing: border-box;
+  font-family: $ff_regular;
+}
+
+.title {
+  font-family: $ff_light;
+  color: $text_grey;
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 1px;
+}
+
+.field {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  border: 1px solid $silver;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0;
+  padding-left: 15px;
+  outline: none;
+  color: $focus;
+  &.error {
+    border: 1px solid $error;
+  }
+}
+
+.textarea {
+  padding: 10px 15px;
+  resize: none;
+  height: 90px;
+}
+
+.field,
+.textarea {
+  transition: border-color 0.3s;
+
+  &:focus {
+    border-color: $focus;
+  }
+}
+
+.textarea,
+.input {
+  font-family: $ff_regular;
+  font-size: 14px;
+}
+// .labelCheckbox {
+//   position: absolute;
+//   border: 1px solid #E0E0E0;
+//   width: 22px;
+//   height: 22px;
+//   z-index: 1;
+//   background-color: transparent;
+// }
+.checkboxWrapper {
+  width: 22px;
+  height: 22px;
+  overflow: hidden;
+  border: 1px solid $silver;
+  cursor: pointer;
+}
+.checkbox {
+  margin: 0;
+  width: 26px;
+  height: 26px;
+  transform: translate(-2px, -2px);
+  cursor: pointer;
+}
+
+.imageWrapper {
+  color: $text_grey;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: $ff_regular;
+  display: flex;
+  flex-direction: column;
+
+  .image {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    button {
+      border-bottom: 1px solid transparent;
+    }
+
+    border: none;
+
+    button {
+      border-bottom: 1px solid transparent;
+      z-index: 1;
+
+      label {
+        height: 17px;
+      }
+    }
+
+    .eclipse {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover .eclipse {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .preview {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      // max-width: 100%;
+      // max-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  input {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    width: auto;
+  }
+
+  .sizePrompt {
+    margin-top: 5px;
+    margin-bottom: 3px;
+  }
+
+  .socialImage {
+    width: 40px;
+    height: 40px;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  @media screen and (max-width: $screen_mobile) {
+    .noSize {
+      display: none;
+    }
+  }
+}
+
+// !
+// ? ControlBtn
+// !
+
+.textBtn {
+  max-width: 150px;
+  text-align: left;
+  background: transparent;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: $ff_regular;
+  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+
+  @media screen and (max-width: 320px) {
+    font-size: 12px;
+  }
+}
+
+.controlBtnText {
+  cursor: pointer;
+}
+
+.moveUp,
+.moveDown {
+  color: $info;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.info {
+  color: $info;
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    border-bottom: 1px solid $info;
+  }
+}
+
+.create {
+  color: $info;
+  line-height: 16px;
+
+  &.hover {
+    span {
+      border-bottom: 1px solid $info;
+
+      &.plus {
+        border-bottom: 1px solid transparent;
+      }
+    }
+  }
+
+  span:hover {
+    border-bottom: 1px solid $info;
+
+    &.plus {
+      border-bottom: 1px solid transparent;
+    }
+  }
+
+  &.unHover {
+    span:hover {
+      border-bottom: 1px solid transparent;
+    }
+  }
+}
+
+.moveUp,
+.moveDown,
+.remove {
+  position: relative;
+  padding-left: 15px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    margin-left: -15px;
+  }
+
+  @media screen and (max-width: 320px) {
+    width: 120px;
+  }
+}
+
+.moveUp::before {
+  transform: rotate(-180deg);
+  background: url(../../assets/icons/textArrow.svg) 100% 5px no-repeat;
+}
+
+.moveDown::before {
+  background: url(../../assets/icons/textArrow.svg) 0 5px no-repeat;
+}
+
+.remove {
+  color: $errorBtn;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &::before {
+    background: url(../../assets/icons/cross.svg) 0 5px no-repeat;
+  }
+}
+
+// !
+// ? ControlBtn - Buttons
+// !
+.save,
+.delete {
+  max-width: max-content;
+  padding: 8px 18px 8px 19px;
+  color: $white;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.save {
+  background-color: $success;
+
+  &:hover {
+    background-color: $successActive;
+  }
+}
+
+.delete {
+  background-color: $errorBtn;
+
+  &:hover {
+    background-color: $errorBtnActive;
+  }
+}
+
+.disabledButton {
+  background-color: #c4c4c4;
+
+  &:hover {
+    cursor: initial;
+    background-color: #c4c4c4;
+  }
+}
+
+.fieldLang {
+  margin-bottom: 12px;
+  color: $text_dark_grey;
+  font-size: 20px;
+  line-height: 30px;
+}

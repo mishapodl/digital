@@ -1,0 +1,132 @@
+@import '../../styles/constants';
+
+.wrapper {
+  margin-top: 105px;
+  display: flex;
+  height: 475px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  @media (max-width: $screen_tablet_max) {
+    height: auto;
+    max-width: 588px;
+    margin: 44px auto;
+    padding: 0 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.textSide {
+  width: 384px;
+  position: relative;
+  margin-right: 50px;
+  margin-top: 20px;
+  @media (max-width: $screen_middle) {
+    margin-right: 0;
+  }
+  @media (max-width: $screen_tablet_max) {
+    margin-top: 0;
+    margin-bottom: 50px;
+    width: auto;
+  }
+  @media (max-width: 500px) {
+    margin-bottom: 0;
+  }
+  .title {
+    font-family: $ff_regular;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0 0 30px 0;
+    color: $text_dark_purple;
+    @media (max-width: 1023px) {
+      font-family: $ff_light;
+      margin-bottom: 50px;
+      color: $text_grey;
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+
+  .subtitle {
+    font-family: $ff_medium;
+    font-size: 18px;
+    line-height: 27px;
+    color: $text_dark_grey;
+    white-space: pre-wrap;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 241px;
+    right: 0;
+    @media (max-width: $screen_tablet_max) {
+      position: static;
+      float: right;
+      transform: scale(1, -1) rotate(-90deg);
+    }
+    @media (max-width: $screen_mobile) {
+      width: 50px;
+      height: 46px;
+    }
+  }
+}
+
+.formWrapper {
+  position: relative;
+  height: 475px;
+  width: 588px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .bg {
+    position: absolute;
+    z-index: -1;
+  }
+
+  .input {
+    border: none;
+    background-color: transparent;
+    color: $white;
+    outline: none;
+    font-family: $ff_regular;
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 10px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid $white;
+    &::placeholder {
+      color: $white;
+      padding-left: 20px;
+    }
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-text-fill-color: $white;
+      caret-color: $white;
+      transition: background-color 9999s ease-in-out;
+    }
+  }
+
+  .submit {
+    width: 280px;
+    height: 50px;
+    padding: 0;
+    margin-top: 24px;
+    font-family: $ff_medium;
+    font-size: 16px;
+    line-height: 24px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+    background-color: $white;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  .form {
+    display: grid;
+  }
+}

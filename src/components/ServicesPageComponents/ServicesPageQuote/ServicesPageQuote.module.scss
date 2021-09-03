@@ -1,0 +1,59 @@
+@import '../../../styles/index.scss';
+
+.mainQuoteWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 240px;
+  @media only screen and (max-width: $screen_tablet) {
+    margin-top: 0px;
+    padding: 0px 90px;
+  }
+  @media only screen and (max-width: $screen_mobile) {
+    padding: 0px 20px;
+    margin-top: 96px;
+  }
+}
+.quoteWrapper {
+  width: 593px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  @media only screen and (max-width: $screen_tablet_max) {
+    margin: 0 auto;
+  }
+  @media only screen and (max-width: $screen_tablet) {
+    width: 100%;
+  }
+  @media only screen and (max-width: $screen_mobile) {
+    svg {
+      width: 26px;
+    }
+  }
+}
+.quoteTextWrapper {
+  padding: 20px 60px;
+
+  @media only screen and (max-width: $screen_mobile) {
+    padding: 20px 30px;
+  }
+  max-width: 100%;
+}
+.quoteUpperText {
+  padding-bottom: 10px;
+  font-size: 24px;
+  line-height: 36px;
+  color: $text_dark_grey;
+  @media only screen and (max-width: $screen_mobile) {
+    font-size: 20px;
+  }
+}
+.quoteLowerText {
+  font-size: 18px;
+  line-height: 27px;
+  color: $text_grey;
+}
+
+.rightQuoteAlign {
+  align-self: flex-end;
+}

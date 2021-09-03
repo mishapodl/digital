@@ -1,0 +1,19 @@
+@import '../../styles/index.scss';
+
+.services {
+  display: none;
+  color: $text_grey;
+  font-size: 24px;
+  margin-left: 90px;
+  margin-top: 109px;
+  margin-bottom: 160px;
+  @media only screen and (max-width: $screen_tablet) {
+    margin-bottom: 160px;
+    display: block;
+  }
+  @media only screen and (max-width: $screen_mobile) {
+    margin-bottom: 96px;
+    display: block;
+    margin-left: 20px;
+  }
+}

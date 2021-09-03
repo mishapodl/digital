@@ -1,0 +1,272 @@
+@import '../../../styles/constants';
+
+.lang {
+  margin-bottom: 12px;
+  color: $text_dark_grey;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 35px;
+
+  .fields {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    > div {
+      margin-right: 30px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .input {
+    max-width: 264px;
+    height: 40px;
+    margin-bottom: 10px;
+    &::placeholder {
+      color: #9b9b9b94;
+    }
+  }
+
+  .textarea {
+    width: 264px;
+    height: 191px;
+  }
+
+  .save {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .moreButton {
+    display: none;
+  }
+
+  .mobileButtonsWrapper {
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: $screen_mobile) {
+    .fields {
+      width: 100%;
+      flex-direction: column;
+
+      > div {
+        margin: 0;
+      }
+    }
+
+    .field {
+      margin-bottom: 10px;
+    }
+
+    .hideFields {
+      display: none;
+    }
+
+    .showFields {
+      display: block;
+    }
+
+    .input {
+      max-width: 100%;
+    }
+
+    .textarea {
+      width: 100%;
+    }
+
+    .mobileButtonsWrapper {
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .save {
+      margin: 0;
+    }
+
+    .moreButton {
+      display: flex;
+      align-items: center;
+      color: $text_grey;
+
+      p {
+        padding-right: 5px;
+      }
+
+      .rotatedArrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.cases {
+  .sCase:first-child .form {
+    padding-top: 0;
+  }
+  .sCase:last-child .form {
+    padding-bottom: 0;
+  }
+  .separator:last-child {
+    display: none;
+  }
+  .cases {
+    border-bottom: 1px solid $silver;
+    margin-bottom: 35px;
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+.formWrapper {
+  display: flex;
+  justify-content: space-between;
+
+  .rightWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .fieldWrapper {
+      width: 48%;
+
+      input {
+        max-width: unset;
+      }
+    }
+  }
+  .services {
+    display: flex;
+    justify-content: space-between;
+    > div {
+      width: 31%;
+      > div {
+        display: flex;
+        align-items: center;
+        span button {
+          margin-top: 15px;
+          margin-left: 10px;
+          color: #fff;
+        }
+        > div {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .leftWrapper {
+    margin: 40px 40px 0 0;
+    margin-top: 0;
+
+    p {
+      font-family: $ff_light;
+      color: $text_grey;
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    .imgSize {
+      padding-top: 5px;
+    }
+
+    .photoUploadWrapper {
+      width: 150px;
+      height: 150px;
+      border: 1px solid $silver;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .buttonWrapper {
+      height: 90px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    input {
+      display: none;
+    }
+  }
+
+  .addService {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    + h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+  }
+
+  @media screen and (max-width: $screen_mobile) {
+    flex-direction: column;
+
+    .leftWrapper {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .buttonWrapper {
+        margin-left: 30px;
+      }
+    }
+
+    .rightWrapper {
+      flex-direction: column;
+
+      .fieldWrapper {
+        width: 100%;
+      }
+    }
+
+    .services {
+      > div {
+        width: 30%;
+
+        &:last-child {
+          width: 37%;
+        }
+        > div {
+          span button {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+
+    .addService {
+      h3 {
+        font-size: $fz_small;
+      }
+
+      button {
+        font-size: $fz_small;
+      }
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .addService {
+      h3 {
+        font-size: $fz_xs;
+      }
+
+      button {
+        font-size: $fz_xs;
+      }
+    }
+  }
+}

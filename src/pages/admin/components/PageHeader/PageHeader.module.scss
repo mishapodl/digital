@@ -1,0 +1,30 @@
+@import '../../../../styles/constants';
+
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 80px;
+  left: 217px;
+  right: 0;
+  margin: 0 auto;
+  z-index: 2;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  padding-top: 20px;
+  padding-right: 100px;
+
+  .create {
+    max-width: 170px;
+    height: 20px;
+  }
+
+  @media screen and (max-width: $screen_mobile) {
+    position: initial;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+}

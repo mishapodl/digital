@@ -1,0 +1,76 @@
+@import '../../../styles/constants';
+
+.separate {
+  display: grid;
+  grid-template: 1fr / min-content 1fr;
+  gap: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid $silver;
+
+  @media screen and (max-width: $screen_mobile) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.addresses {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr 1fr;
+  gap: 30px;
+
+  @media screen and (max-width: $screen_mobile) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.subFields {
+  & > * {
+    width: (calc((100% - 60px) / 3));
+    margin-top: 12px;
+  }
+  margin-bottom: 30px;
+
+  @media screen and (max-width: $screen_mobile) {
+    margin-top: 50px;
+
+    & > * {
+      width: 100%;
+    }
+  }
+}
+
+.save {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.privacyPolicy {
+  font-family: $ff_light;
+  color: $text_grey;
+  padding-bottom: 30px;
+  h3 {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    font-size: $fz_small;
+  }
+  label {
+    cursor: pointer;
+    > span {
+      display: inline-block;
+      vertical-align: middle;
+      padding-right: 5px;
+    }
+  }
+  .fileBtn {
+    color: $info;
+    font-family: $ff_regular;
+  }
+  .tip {
+    font-size: $fz_xs;
+  }
+  input {
+    display: none;
+  }
+}

@@ -1,0 +1,69 @@
+@import './constants';
+
+@font-face {
+  font-family: 'MPlusRounded1C-Regular';
+  src: url('../assets/fonts/mplusrounded1c-regular-webfont.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MPlusRounded1C-Medium';
+  src: url('../assets/fonts/mplusrounded1c-medium-webfont.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MPlusRounded1C-Light';
+  src: url('../assets/fonts/mplusrounded1c-light-webfont.ttf') format('truetype');
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'MPlusRounded1C-Regular';
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+// ! Safari-mobile input rounded by default //
+input {
+  border-radius: 0;
+}
+input[type='search'] {
+  -webkit-appearance: none;
+}
+
+.container {
+  flex: 1 0 auto;
+  max-width: 945px;
+  margin: 170px auto 200px;
+
+  @media screen and (max-width: $screen_tablet) {
+    margin: 140px auto 200px;
+  }
+
+  @media screen and (max-width: $screen_mobile) {
+    margin: 50px auto 60px;
+  }
+}

@@ -1,0 +1,164 @@
+@import '../../../styles/constants';
+
+.lang {
+  margin-bottom: 12px;
+  color: $text_dark_grey;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0 35px;
+
+  .fields {
+    width: 852px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .input {
+    max-width: 264px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .textarea {
+    width: 264px;
+    height: 191px;
+  }
+
+  .save {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .moreButton {
+    display: none;
+  }
+
+  .mobileButtonsWrapper {
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: $screen_mobile) {
+    .fields {
+      width: 100%;
+      flex-direction: column;
+      display: none;
+    }
+
+    .field {
+      margin-bottom: 10px;
+    }
+
+    .showFields {
+      display: flex;
+    }
+
+    .input {
+      max-width: 100%;
+    }
+
+    .textarea {
+      width: 100%;
+    }
+
+    .mobileButtonsWrapper {
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .save {
+      margin: 0;
+    }
+
+    .moreButton {
+      display: flex;
+      align-items: center;
+      color: $text_grey;
+
+      p {
+        padding-right: 5px;
+      }
+
+      .rotatedArrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.team {
+  .member:first-child .form {
+    padding-top: 0;
+  }
+  .member:last-child .form {
+    padding-bottom: 0;
+  }
+  .separator:last-child {
+    display: none;
+  }
+}
+
+.formWrapper {
+  display: flex;
+  justify-content: space-between;
+
+  .leftWrapper {
+    margin: 40px 40px 0 0;
+
+    p {
+      font-family: $ff_light;
+      color: $text_grey;
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    .imgSize {
+      padding-top: 5px;
+    }
+
+    .photoUploadWrapper {
+      width: 150px;
+      height: 150px;
+      border: 1px solid $silver;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .buttonWrapper {
+      // height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 10px;
+
+      button {
+        margin-bottom: 5px;
+      }
+    }
+
+    input {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $screen_mobile) {
+    flex-direction: column;
+
+    .leftWrapper {
+      margin: 0;
+      display: flex;
+      align-items: center;
+
+      .buttonWrapper {
+        margin-left: 30px;
+      }
+    }
+  }
+}

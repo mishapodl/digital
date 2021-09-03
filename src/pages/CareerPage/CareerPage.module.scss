@@ -1,0 +1,34 @@
+@import '../../styles/constants';
+
+.label {
+  cursor: pointer;
+  margin-bottom: 36px;
+  .file {
+    position: relative;
+    display: grid;
+    padding-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    span {
+      color: $white;
+    }
+    [data-error] {
+      position: absolute;
+      top: 100%;
+      color: $error;
+      padding-left: 20px;
+    }
+    .tip {
+      width: 260px;
+      padding-left: 17px;
+      font-size: 14px;
+      line-height: 21px;
+      font-family: $ff_light;
+    }
+  }
+  .input {
+    display: none;
+  }
+}

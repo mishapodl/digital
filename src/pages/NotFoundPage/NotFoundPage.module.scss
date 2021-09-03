@@ -1,0 +1,70 @@
+@import '../../styles/index';
+
+.centered {
+  display: flex;
+  @media only screen and (max-width: $screen_tablet) {
+    margin-top: 210px;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media only screen and (max-width: $screen_mobile) {
+    margin-top: 140px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.blob {
+  transform: rotate(-13.5deg);
+  width: 320px;
+  @media only screen and (max-width: $screen_mobile) {
+    width: 275px;
+  }
+}
+.imgContainer {
+  position: relative;
+  text-align: center;
+  width: 320px;
+  @media only screen and (max-width: $screen_mobile) {
+    width: 285px;
+  }
+}
+.imgText {
+  font-size: 52px;
+  font-weight: 600;
+  color: white;
+  position: absolute;
+  width: 200px;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.buttonPadding {
+  padding-top: 50px;
+}
+.notFoundTextWrapper {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-left: 60px;
+  @media only screen and (max-width: $screen_tablet) {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    padding-left: 0px;
+  }
+  //margin: auto 0;
+}
+.notFoundHeader {
+  font-size: 68px;
+  color: $text_dark_purple;
+}
+.subText {
+  color: $text_grey;
+  font-size: 18px;
+  @media only screen and (max-width: $screen_tablet) {
+    text-align: center;
+    padding: 0px 20px;
+  }
+}

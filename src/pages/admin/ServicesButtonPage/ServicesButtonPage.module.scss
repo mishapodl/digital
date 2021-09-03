@@ -1,0 +1,44 @@
+@import '../../../styles/constants';
+
+.lang {
+  margin-bottom: 12px;
+  color: $text_dark_grey;
+}
+
+.form {
+  .fields {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .textarea {
+    width: 261px;
+    height: 193px;
+  }
+
+  .save {
+    margin-top: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media screen and (max-width: $screen_mobile) {
+    .fields {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .lang {
+      margin-top: 30px;
+    }
+
+    .fieldWrapper {
+      width: 100%;
+
+      .textarea {
+        width: 100%;
+      }
+    }
+  }
+}

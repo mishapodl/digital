@@ -1,0 +1,83 @@
+@import '../../styles/constants';
+
+.header {
+  display: none;
+  font-size: $fz_large;
+  color: $text_grey;
+  margin: 0;
+  margin-top: 59px;
+  margin-bottom: 35px;
+  font-family: $ff_light;
+
+  @media screen and (max-width: $screen_tablet) {
+    display: block;
+  }
+}
+
+.aboutUsContent {
+  display: flex;
+
+  @media screen and (max-width: $screen_middle) {
+    padding: 0 20px;
+  }
+}
+.text {
+  font-size: $fz_middle;
+  color: $text_dark_grey;
+  width: 535px;
+
+  li {
+    list-style-type: '—';
+    list-style-position: inside;
+    padding: 5px 0 5px 20px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  p {
+    margin: 0;
+    padding-top: 30px;
+    white-space: pre-line;
+
+    &:nth-child(2) {
+      padding: 0;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 5px 0;
+  }
+
+  @media screen and (max-width: $screen_tablet) {
+    width: unset;
+    max-width: 590px;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: $screen_mobile) {
+    li,
+    p {
+      font-size: $fz_normal;
+    }
+
+    margin-top: 100px;
+  }
+}
+.image {
+  background: url('../../assets/images/about-us-img.png');
+  min-height: 658px;
+  min-width: 360px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 50px;
+
+  @media screen and (max-width: $screen_middle) {
+    margin-right: 25px;
+  }
+
+  @media screen and (max-width: $screen_tablet) {
+    display: none;
+  }
+}

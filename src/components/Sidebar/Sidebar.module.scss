@@ -1,0 +1,76 @@
+@import '../../styles/constants';
+
+.barNavigation {
+  padding-top: 18px;
+  padding-bottom: 120px;
+  height: 100%;
+
+  @media screen and (max-width: $screen_mobile) {
+    padding-bottom: 20px;
+  }
+
+  ul {
+    > li {
+      position: relative;
+      svg {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        transform: rotate(180deg);
+        transition: 0.3s;
+      }
+      > a {
+        font-family: $ff_medium;
+        font-size: $fz_normal;
+        line-height: 24px;
+        color: $text_purple;
+        padding: 10px 0 10px 30px;
+        width: calc(100% - 30px);
+        display: inline-block;
+        transition: 0.1s;
+        &:hover {
+          background-color: #fff;
+          color: $text_dark_purple;
+        }
+        &.activeLink {
+          background-color: #fff;
+          color: $text_dark_purple;
+          &.subMenu {
+            background-color: unset;
+            &:hover {
+              background-color: #fff;
+            }
+          }
+        }
+      }
+      > ul {
+        overflow: hidden;
+        transition: 0.3s;
+        height: 0;
+        > li {
+          a {
+            padding-left: 50px;
+          }
+        }
+      }
+      &.active {
+        svg {
+          transform: rotate(0);
+        }
+        ul {
+          height: 88px;
+        }
+      }
+    }
+  }
+}
+
+.hiddenNavigation {
+  display: none;
+}
+
+@media screen and (max-width: $screen_mobile) {
+  .visible {
+    display: block;
+  }
+}
